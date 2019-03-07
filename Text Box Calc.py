@@ -1,4 +1,4 @@
-# Nicholaus Whites / Destroyerasdf
+# Nicholaus Whites
 # Text Box Calulator
 # plz don't steal thx
 
@@ -55,19 +55,23 @@ class Application(Frame):
         self.submit_bttn.grid(row=5, column=2, sticky=W)
 
         # Create text widget to display message
-        self.secret_txt = Text(self, width=35, height=5, wrap=WORD)
-        self.secret_txt.grid(row=7, column=0, columnspan=3, sticky=W)
+        self.answer_txt = Text(self, width=35, height=5, wrap=WORD)
+        self.answer_txt.grid(row=7, column=0, columnspan=3, sticky=W)
 
     def add_num(self):
+        """Changes the operation to addition"""
         self.operation = "add"
 
     def sub_num(self):
+        """Changes the operation to subtraction"""
         self.operation = "sub"
 
     def mult_num(self):
+        """Changes the operation to multiplication"""
         self.operation = "mult"
 
     def div_num(self):
+        """Changes the operation to division"""
         self.operation = "div"
 
     def reveal(self):
@@ -88,9 +92,9 @@ class Application(Frame):
             else:
                 message = "something went wrong"
         else:
-            message = "Only Integers"
-        self.secret_txt.delete(0.0, END)
-        self.secret_txt.insert(0.0, message)
+            message = "Only Positive Integers"
+        self.answer_txt.delete(0.0, END)
+        self.answer_txt.insert(0.0, message)
 
 
 root = Tk()
