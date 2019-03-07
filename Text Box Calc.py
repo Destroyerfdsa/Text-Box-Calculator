@@ -1,4 +1,4 @@
-# Nicholaus Whites
+# Nicholaus Whites / Destroyerasdf
 # Text Box Calulator
 # plz don't steal thx
 
